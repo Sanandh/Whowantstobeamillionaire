@@ -1,0 +1,13 @@
+name: WhoWantsToBeaMillionaire
+title: WhoWantsToBeaMillionaire
+username:
+account: sanandhrreports
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2019636
+bundleId: 2950279
+url: https://sanandhrreports.shinyapps.io/WhoWantsToBeaMillionaire/
+when: 1585679255.68507
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: FunnyQuestions.xlsx
