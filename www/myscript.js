@@ -22,6 +22,15 @@ function answerCheck(answer){
 	var correctAnswer = document.getElementById("CorrectAnswer").innerHTML.trim();
 	//alert(correctAnswer);
   document.getElementById("results").style.visibility = "visible";
+  //Lock the answers
+  $("#choice1").css("pointer-events","none");
+  $("#choice2").css("pointer-events","none");
+  $("#choice3").css("pointer-events","none");
+  $("#choice4").css("pointer-events","none");
+  
+  
+  
+  
 	if(correctAnswer == answer){
 //Is this not the last question?
 					//Play the sound
@@ -37,14 +46,14 @@ function answerCheck(answer){
 					document.getElementById("results").scrollIntoView();
 					
 						var PlayerName1=document.getElementById("PlayerName").value;
-			  var prize="1000000";
+			  var prize="1000000$";
         document.getElementById("PrizeDetailsBody").innerHTML
         ="Hi" +"   " + PlayerName1 +",  "+" You have recieved" + "  " + prize;
         			 
         setTimeout(function(){
        $('#PrizeDetails').modal('show');
-         }, 3000);
-					
+         }, 1000);
+				document.getElementById("PrizeDetails").scrollIntoView();	
 				} //End of last question check
 				
 			}
@@ -61,7 +70,14 @@ function answerCheck(answer){
         			 
         setTimeout(function(){
        $('#PrizeDetails').modal('show');
-         }, 3000);
+         }, 1000);
+         
+         //Lock the options
+         	document.getElementById("PrizeDetails").scrollIntoView();	
+         $("#choice1").css("pointer-events","none");
+         $("#choice2").css("pointer-events","none");
+         $("#choice3").css("pointer-events","none");
+         $("#choice4").css("pointer-events","none");
 
 				//Mark it shamefully red
 				if(answer == "a"){
@@ -160,6 +176,13 @@ function answerCheck(answer){
 function UpdateQuestions() 
 {
   
+      //Unlock the answers
+      $("#choice1").css("pointer-events","auto");
+      $("#choice2").css("pointer-events","auto");
+      $("#choice3").css("pointer-events","auto");
+      $("#choice4").css("pointer-events","auto");
+      
+      
       document.getElementById("qbox1").scrollIntoView();
       var id =document.getElementById("QuestionId").innerHTML;
      // alert(id);
